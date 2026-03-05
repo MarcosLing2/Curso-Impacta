@@ -1,7 +1,16 @@
 :root {
-  --primary-color: #96BB7C;
+  --primary-color: #968B7C;
   light-color: #ffffff;
-}
+  --fade-secundary-color: #DDF4FF;
 * {
   margin: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--fade-secundary-color);
+  font-family: Arial, Helvetica, sans-serif
 }
