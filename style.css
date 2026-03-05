@@ -1,4 +1,7 @@
 :root {
--primary-color: #96BB7C;
-light-color: #ffffff;
+  --primary-color: #96BB7C;
+  light-color: #ffffff;
+}
+* {
+  margin: 0;
 }
