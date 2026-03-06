@@ -1,139 +1,140 @@
 :root {
-    --primary-color: #96BB7C;
-    --light-color: #ffffff;
-    --fade-secundary-color: #DDF4FF;
-    --brand-log: #252B42;
-    --second-text-color: #737373;
-    --hover-text-color:#272935;
-    --hover-btn-color: #414c3a;
+--primary-color:#96BB7C;
+--light-color:#ffffff;
+--fade-secundary-color:#DDF4FF;
+--brand-log:#252B42;
+--second-text-color:#737373;
+--hover-text-color:#272935;
 }
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
-
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:25px 0;
-}
-
-.logotipo{
-    font-weight:bold;
-    font-size:20px;
-    color:var(--brand-log);
-}
-
-.menu ul{
-    display:flex;
-    list-style:none;
-    gap:35px;
-}
-
-.item-link{
-    text-decoration:none;
-    color:var(--second-text-color);
-    font-weight:bold;
-    font-size:14px;
-}
-
-.item-link:hover{
-    color:var(--hover-text-color);
-}
-
-.nav-auth{
-    display:flex;
-    align-items:center;
-    gap:20px;
-}
-
-.btn-login{
-    text-decoration:none;
-    color:var(--primary-color);
-    font-weight:bold;
-}
-
-.btn{
-    text-decoration:none;
-    background:var(--primary-color);
-    color:white;
-    padding:12px 28px;
-    border-radius:6px;
-    font-weight:bold;
-}
-
 
 .trust{
-    background: var(--fade-secundary-color);
-    width:100%;
-    min-height:700px;
-    padding-bottom:80px;
+background:var(--fade-secundary-color);
+width:100%;
+min-height:700px;
 }
 
 .container{
-    width:100%;
-    max-width:1200px;
-    margin:auto;
+max-width:1200px;
+margin:auto;
+padding:0 20px;
 }
 
-.trust .container:last-child{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 0;
 }
 
+.logotipo{
+font-weight:bold;
+font-size:20px;
+color:var(--brand-log);
+}
+
+.menu ul{
+display:flex;
+list-style:none;
+gap:35px;
+}
+
+.item-link{
+text-decoration:none;
+color:var(--second-text-color);
+font-weight:bold;
+font-size:14px;
+}
+
+.item-link:hover{
+color:var(--hover-text-color);
+}
+
+.nav-auth{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.btn-login{
+text-decoration:none;
+color:var(--primary-color);
+font-weight:bold;
+}
+
+.btn{
+text-decoration:none;
+background:var(--primary-color);
+color:white;
+padding:12px 28px;
+border-radius:6px;
+font-weight:bold;
+}
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-top:60px;
+}
 
 .trust-content{
-    max-width:500px;
+max-width:500px;
 }
 
 .best-dental{
-    color:var(--primary-color);
-    font-weight:bold;
-    margin-bottom:20px;
+color:var(--primary-color);
+font-weight:bold;
+margin-bottom:20px;
 }
 
 .trust-content h1{
-    font-size:64px;
-    font-weight:800;
-    color:var(--brand-log);
-    line-height:1.1;
-    margin-bottom:25px;
+font-size:64px;
+font-weight:800;
+color:var(--brand-log);
+line-height:1.1;
+margin-bottom:25px;
 }
 
 .trust-content p{
-    color:var(--second-text-color);
-    font-size:18px;
-    margin-bottom:35px;
+color:var(--second-text-color);
+font-size:18px;
+margin-bottom:35px;
 }
 
-
 .trust-btns{
-    display:flex;
-    gap:20px;
+display:flex;
+gap:20px;
 }
 
 .trust-btns button{
-    padding:15px 30px;
-    border-radius:6px;
-    border:none;
-    font-weight:bold;
-    cursor:pointer;
+padding:15px 30px;
+border-radius:6px;
+border:none;
+font-weight:bold;
+cursor:pointer;
 }
 
 .trust-btns button:first-child{
-    background:var(--primary-color);
-    color:white;
+background:var(--primary-color);
+color:white;
 }
 
 .trust-btns button:last-child{
-    background:transparent;
-    border:2px solid var(--primary-color);
-    color:var(--primary-color);
+background:transparent;
+border:2px solid var(--primary-color);
+color:var(--primary-color);
+}
+
+.images-tecnology img{
+width:520px;
+max-width:100%;
 }
 
 .images-tecnology img{
