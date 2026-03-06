@@ -6,7 +6,9 @@
 	--second-text-color:#737373;
 	--hover-text-color:#272935;
 }
-
+body{
+font-family:'Montserrat', sans-serif;
+}
 *{
 	margin:0;
 	padding:0;
