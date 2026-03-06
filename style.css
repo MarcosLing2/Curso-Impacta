@@ -1,18 +1,27 @@
 :root {
-  --primary-color: #968B7C;
-  light-color: #ffffff;
-  --fade-secundary-color: #DDF4FF;
+    --primary-color: #96BB7C;
+    --light-color: #ffffff;
+    --fade-secundary-color: #DDF4FF;
+    --brand-log: #252B42;
+    --second-text-color: #737373;
+    --hover-text-color:#272935;
+    --hover-btn-color: #414c3a;
+}
 * {
-  margin: 0;
-  box-sizing: border-box;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
 }
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: var(--fade-secundary-color);
-  font-family: Arial, Helvetica, sans-serif
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: var(--fade-secundary-color);
+    font-family: Arial, Helvetica, sans-serif;
 }
 .logo a {
   font-size: 1rem;
