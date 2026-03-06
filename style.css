@@ -1,143 +1,175 @@
 :root {
---primary-color:#96BB7C;
---light-color:#ffffff;
---fade-secundary-color:#DDF4FF;
---brand-log:#252B42;
---second-text-color:#737373;
---hover-text-color:#272935;
+	--primary-color:#96BB7C;
+	--light-color:#ffffff;
+	--fade-secundary-color:#DDF4FF;
+	--brand-log:#252B42;
+	--second-text-color:#737373;
+	--hover-text-color:#272935;
 }
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family:Arial, Helvetica, sans-serif;
 }
 
 .trust{
-background:var(--fade-secundary-color);
-width:100%;
-min-height:700px;
+	background:var(--fade-secundary-color);
+	width:100%;
+	min-height:700px;
 }
 
 .container{
-max-width:1200px;
-margin:auto;
-padding:0 20px;
+	max-width:1200px;
+	margin:auto;
+	padding:0 20px;
 }
 
 .navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:25px 10px;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	padding:25px 10px;
 }
 
 .logotipo{
-font-weight:bold;
-font-size:20px;
-color:var(--brand-log);
+	font-weight:bold;
+	font-size:20px;
+	color:var(--brand-log);
 }
 
 .menu ul{
-display:flex;
-list-style:none;
-gap:35px;
+	display:flex;
+	list-style:none;
+	gap:35px;
 }
 
 .item-link{
-text-decoration:none;
-color:var(--second-text-color);
-font-weight:bold;
-font-size:14px;
+	text-decoration:none;
+	color:var(--second-text-color);
+	font-weight:bold;
+	font-size:14px;
 }
 
 .item-link:hover{
-color:var(--hover-text-color);
+	color:var(--hover-text-color);
 }
 
 .nav-auth{
-display:flex;
-align-items:center;
-gap:20px;
+	display:flex;
+	align-items:center;
+	gap:20px;
 }
 
 .btn-login{
-text-decoration:none;
-color:var(--primary-color);
-font-weight:bold;
+	text-decoration:none;
+	color:var(--primary-color);
+	font-weight:bold;
 }
 
 .btn{
-text-decoration:none;
-background:var(--primary-color);
-color:white;
-padding:12px 28px;
-border-radius:6px;
-font-weight:bold;
+	text-decoration:none;
+	background:var(--primary-color);
+	color:white;
+	padding:12px 28px;
+	border-radius:6px;
+	font-weight:bold;
 }
 
 .hero{
-display:flex;
-align-items:center;
-justify-content:space-between;
-margin-top:60px;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	margin-top:60px;
 }
 
 .trust-content{
-max-width:500px;
+	max-width:500px;
 }
 
 .best-dental{
-color:var(--primary-color);
-font-weight:bold;
-margin-bottom:20px;
+	color:var(--primary-color);
+	font-weight:bold;
+	margin-bottom:20px;
 }
 
 .trust-content h1{
-font-size:64px;
-font-weight:800;
-color:var(--brand-log);
-line-height:1.1;
-margin-bottom:25px;
+	font-size:64px;
+	font-weight:800;
+	color:var(--brand-log);
+	line-height:1.1;
+	margin-bottom:25px;
 }
 
 .trust-content p{
-color:var(--second-text-color);
-font-size:18px;
-margin-bottom:35px;
+	color:var(--second-text-color);
+	font-size:18px;
+	margin-bottom:35px;
 }
 
 .trust-btns{
-display:flex;
-gap:20px;
+	display:flex;
+	gap:20px;
 }
 
 .trust-btns button{
-padding:15px 30px;
-border-radius:6px;
-border:none;
-font-weight:bold;
-cursor:pointer;
+	padding:15px 30px;
+	border-radius:6px;
+	border:none;
+	font-weight:bold;
+	cursor:pointer;
 }
 
 .trust-btns button:first-child{
-background:var(--primary-color);
-color:white;
+	background:var(--primary-color);
+	color:white;
 }
 
 .trust-btns button:last-child{
-background:transparent;
-border:2px solid var(--primary-color);
-color:var(--primary-color);
+	background: transparent;
+	border: 2px solid var(--primary-color);
+	color: var(--primary-color);
 }
 
-.images-tecnology img{
-width:520px;
-max-width:100%;
+.images-tecnology{
+    position: relative;
+
+    background-image: url("ellipse.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.images-tecnology img{
+.images-tecnology img.main{
     width:520px;
     max-width:100%;
+}
+
+.single{
+    position:absolute;
+    left:-40px;
+    top:180px;
+    width:160px;
+    z-index:2;
+}
+
+.scores{
+    position:absolute;
+    left:80px;
+    bottom:-10px;
+    width:180px;
+    z-index:1;
+}
+
+.global-statics{
+    position:absolute;
+    right:-60px;
+    top:100px;
+    width:180px;
+    z-index:3;
 }
