@@ -7,63 +7,132 @@
     --hover-text-color:#272935;
     --hover-btn-color: #414c3a;
 }
-* {
-    margin: 0;
-    box-sizing: border-box;
-}
 
-html {
-    font-size: 16px;
-}
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    background-color: var(--fade-secundary-color);
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-.logo a {
-  font-size: 1rem;
-  color: var( -- brand-log);
-  font-weight: bold;
-  text-decoration: none;
-}
-.menu ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}  
-.item-link {
-    text-decoration: none;
-    color: var(--second-text-color);
-    font-weight: bold;
-    font-size: 0.9rem;
+
+body{
+    background: var(--fade-secundary-color);
 }
 
-.item-link:hover {
-    color: var(--hover-text-color);
-}
-.nav-auth {
-    display: flex;
-    align-items: center;
-    color: var(--primary-color);
-    gap: 25px;
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 10%;
 }
 
-.btn-login {
-    text-decoration: none;
+.logotipo{
+    font-weight:bold;
+    font-size:20px;
+    color:var(--brand-log);
+}
+
+.menu ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.item-link{
+    text-decoration:none;
+    color:var(--second-text-color);
+    font-weight:bold;
+    font-size:14px;
+}
+
+.item-link:hover{
+    color:var(--hover-text-color);
+}
+
+.nav-auth{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.btn-login{
+    text-decoration:none;
     color:var(--primary-color);
-    font-weight: bold;
-    font-size: 0.9rem;
+    font-weight:bold;
 }
 
-.btn {
-    text-decoration: none;
-    background-color: var(--primary-color);
-    color:var(--light-color);
-    padding: 12px 30px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 0.9rem;
+.btn{
+    text-decoration:none;
+    background:var(--primary-color);
+    color:white;
+    padding:12px 28px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+
+.trust{
+    padding:80px 10%;
+}
+
+.container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+
+.trust-content{
+    max-width:500px;
+}
+
+.best-dental{
+    color:var(--primary-color);
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.trust-content h1{
+    font-size:64px;
+    font-weight:800;
+    color:var(--brand-log);
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.trust-content p{
+    color:var(--second-text-color);
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+
+.trust-btns{
+    display:flex;
+    gap:20px;
+}
+
+.trust-btns button{
+    padding:15px 30px;
+    border-radius:6px;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.trust-btns button:first-child{
+    background:var(--primary-color);
+    color:white;
+}
+
+.trust-btns button:last-child{
+    background:transparent;
+    border:2px solid var(--primary-color);
+    color:var(--primary-color);
+}
+
+.images-tecnology img{
+    width:520px;
+    max-width:100%;
 }
