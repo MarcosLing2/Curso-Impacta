@@ -15,11 +15,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    background: var(--fade-secundary-color);
-}
-
-
 .navbar{
     display:flex;
     justify-content:space-between;
