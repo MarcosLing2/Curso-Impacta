@@ -14,9 +14,24 @@
   background-color: var(--fade-secundary-color);
   font-family: Arial, Helvetica, sans-serif
 }
-.logo {
+.logo a {
   font-size: 1rem;
   color: var( -- brand-log);
   font-weight: bold;
   text-decoration: none;
+}
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}  
+.item-link {
+    text-decoration: none;
+    color: var(--second-text-color);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.item-link:hover {
+    color: var(--hover-text-color);
 }
