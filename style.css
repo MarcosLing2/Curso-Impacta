@@ -69,11 +69,9 @@
 
 .trust{
     background: var(--fade-secundary-color);
-    width: 100%;
-    min-height: 90vh;
-    max-height: 850px;
-    display: flex;
-    align-items: center;
+    width:100%;
+    min-height:700px;
+    padding-bottom:80px;
 }
 
 .container{
