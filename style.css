@@ -20,6 +20,7 @@
     justify-content:space-between;
     align-items:center;
     padding:25px 10%;
+    color:var(--primary-color);
 }
 
 .logotipo{
