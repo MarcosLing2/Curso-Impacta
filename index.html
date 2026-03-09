@@ -24,7 +24,7 @@
                 </nav>
                 <div class="nav-auth">
                     <a href="#" class="btn-login">Login</a>
-                    <a href="#" class="btn btn-primary">Join Us</a>
+                    <a href="#" class="btn btn-primary">Join Us <span aria-hidden="true">-&gt;</span></a>
                 </div>
             </header>
 
@@ -42,9 +42,9 @@
                 <section class="hero-visual" aria-label="Destaques visuais">
                     <div class="visual-circle"></div>
                     <img class="student-image" src="images/technology.png" alt="Estudante sorrindo com mochila">
-                    <img class="floating-card single" src="images/Singles.png" alt="Cartao com destaque de singles">
-                    <img class="floating-card scores" src="images/Scores.png" alt="Cartao com ultimas pontuacoes">
-                    <img class="floating-card global-statics" src="images/Statistic.png" alt="Cartao com estatisticas globais">
+                    <img class="floating-card single" src="Singles.png" alt="Cartao com destaque de singles">
+                    <img class="floating-card scores" src="Scores.png" alt="Cartao com ultimas pontuacoes">
+                    <img class="floating-card global-statics" src="Statistic.png" alt="Cartao com estatisticas globais">
                 </section>
             </div>
         </div>
@@ -80,19 +80,19 @@
             </div>
             <div class="card-grid">
                 <article class="feature-card">
-                    <div class="card-icon">M</div>
+                    <div class="card-icon">o</div>
                     <h3>Lifetime access</h3>
                     <span class="card-line"></span>
                     <p>The gradual accumulation of information about</p>
                 </article>
                 <article class="feature-card">
-                    <div class="card-icon">C</div>
+                    <div class="card-icon">[]</div>
                     <h3>training Courses</h3>
                     <span class="card-line"></span>
                     <p>The gradual accumulation of information about</p>
                 </article>
                 <article class="feature-card">
-                    <div class="card-icon">L</div>
+                    <div class="card-icon">B</div>
                     <h3>Training Courses</h3>
                     <span class="card-line"></span>
                     <p>The gradual accumulation of information about</p>
@@ -100,5 +100,81 @@
             </div>
         </div>
     </section>
+
+    <script>
+        const heroVisual = document.querySelector('.hero-visual');
+
+if (heroVisual) {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const supportsFinePointer = window.matchMedia('(pointer: fine)');
+
+    const revealHero = () => {
+        requestAnimationFrame(() => {
+            heroVisual.classList.add('is-visible');
+        });
+    };
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    revealHero();
+                    observer.disconnect();
+                }
+            });
+        },
+        {
+            threshold: 0.35
+        }
+    );
+
+    observer.observe(heroVisual);
+
+    if (!prefersReducedMotion.matches && supportsFinePointer.matches) {
+        const maxOffset = 16;
+        let currentX = 0;
+        let currentY = 0;
+        let targetX = 0;
+        let targetY = 0;
+        let rafId = null;
+
+        const render = () => {
+            currentX += (targetX - currentX) * 0.12;
+            currentY += (targetY - currentY) * 0.12;
+
+            heroVisual.style.setProperty('--pointer-x', `${currentX.toFixed(2)}px`);
+            heroVisual.style.setProperty('--pointer-y', `${currentY.toFixed(2)}px`);
+
+            const isMoving = Math.abs(targetX - currentX) > 0.05 || Math.abs(targetY - currentY) > 0.05;
+            rafId = isMoving ? requestAnimationFrame(render) : null;
+        };
+
+        const startRender = () => {
+            if (!rafId) {
+                rafId = requestAnimationFrame(render);
+            }
+        };
+
+        heroVisual.addEventListener('pointermove', (event) => {
+            const rect = heroVisual.getBoundingClientRect();
+            const offsetX = (event.clientX - rect.left) / rect.width - 0.5;
+            const offsetY = (event.clientY - rect.top) / rect.height - 0.5;
+
+            targetX = offsetX * maxOffset;
+            targetY = offsetY * maxOffset;
+            startRender();
+        });
+
+        heroVisual.addEventListener('pointerleave', () => {
+            targetX = 0;
+            targetY = 0;
+            startRender();
+        });
+    } else {
+        heroVisual.classList.add('is-visible');
+    }
+}
+
+    </script>
 </body>
 </html>
